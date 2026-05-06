@@ -1,0 +1,126 @@
+/* ===== PAGE LAYOUT ===== */
+.quiz-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== MAIN CONTENT ===== */
+.quiz-container {
+  flex: 1;
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+/* ===== TITLE ===== */
+.quiz-title {
+  font-size: 48px;
+  margin-bottom: 50px;
+}
+
+/* ===== GRID ===== */
+.mode-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* ===== MODE CARD ===== */
+.mode-card {
+  background-color: #10222d;
+  border: 2px solid #1e4b63;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+/* TITLE */
+.mode-card h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+/* DESCRIPTION */
+.mode-card p {
+  font-size: 13px;
+  color: #ccc;
+  margin-bottom: 25px;
+}
+
+/* BUTTON */
+.start-btn {
+  display: inline-block;
+  background-color: #00bfff;
+  color: #0d1b2a;
+  padding: 14px 32px;
+  text-decoration: none;
+  border: 3px solid #ffffff;
+  font-size: 13px;
+}
+
+.start-btn:hover {
+  background-color: #0099cc;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .mode-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quiz-title {
+    font-size: 32px;
+  }
+}
+
+/* ===== DIFFICULTY COLORS ===== */
+
+
+/* EASY – GREEN */
+.start-btn.easy {
+  background-color: #2ecc71;
+  color: #ffffff;
+}
+
+.start-btn.easy:hover {
+  background-color: #27ae60;
+}
+
+/* MEDIUM – YELLOW / ORANGE */
+.start-btn.medium {
+  background-color: #f1c40f;
+  color: #0d1b2a; /* darker text for better contrast on yellow */
+}
+
+.start-btn.medium:hover {
+  background-color: #d4ac0d;
+}
+
+/* HARD – RED */
+.start-btn.hard {
+  background-color: #e74c3c;
+  color: #ffffff;
+}
+
+.start-btn.hard:hover {
+  background-color: #c0392b;
+}
+
+/* SHARED BUTTON STYLE (pixel feel preserved) */
+.start-btn {
+  display: inline-block;
+  padding: 10px 25px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  border: 3px solid #ffffff;
+  box-shadow: 4px 4px 0 #000000;
+  image-rendering: pixelated;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.start-btn:hover {
+  box-shadow: 2px 2px 0 #000000;
+}
+

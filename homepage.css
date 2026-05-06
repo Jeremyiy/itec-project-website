@@ -1,0 +1,92 @@
+/*===== HOMEPAGE HERO ===== */
+.hero {
+  position: relative;
+  height: calc(100vh - 140px); /* nav + footer */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;     /* ✅ vertical centering */
+  align-items: flex-start;     /* ✅ left-aligned like screenshot */
+  padding-left: 60px;          /* ✅ pushes text away from edge */
+  padding-right: 40px;
+  overflow: hidden;
+}
+
+/* Background video */
+.bg-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  transform: scaleX(-1);
+}
+
+
+/* Optional dark overlay for readability */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 15, 25, 0.55);
+  z-index: -1;
+}
+
+/* HERO TITLE */
+.hero h1 {
+  font-size: 64px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  max-width: 650px;
+}
+
+/* Highlight word */
+.highlight,
+.marine_life {
+  color: #40E0D0;
+}
+
+/* HERO TEXT */
+.hero p {
+  max-width: 680px;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+/* BUTTONS */
+.buttons {
+  display: flex;
+  gap: 24px;
+}
+
+.buttons a {
+  background-color: #00bfff;
+  color: #0d1b2a;
+  padding: 14px 32px;
+  text-decoration: none;
+  border: 3px solid #ffffff;
+  font-size: 13px;
+}
+
+.buttons a:hover {
+  background-color: #0099cc;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .hero {
+    padding-left: 24px;
+    padding-right: 24px;
+    align-items: center;      /* center text on mobile */
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+}

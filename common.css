@@ -1,0 +1,77 @@
+
+/* ===== GLOBAL ===== */
+body {
+  margin: 0;
+  font-family: "Press Start 2P", system-ui;
+  background-color: #0d1b2a;
+  color: #ffffff;
+}
+
+/* ===== NAV ===== */
+nav {
+  background-color: #1b263b;
+  padding: 14px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 4px solid #39545c;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  height: 36px;
+}
+
+.site-name {
+  font-size: 18px;
+}
+
+.accent {
+  color: #40E0D0;
+}
+
+.nav-right {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-right a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.nav-right a:hover,
+.nav-right a.active {
+  color: #40E0D0;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: #1b263b;
+  padding: 18px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 4px solid #39545c;
+  font-size: 12px;
+}
+
+.foot-right {
+  display: flex;
+  gap: 22px;
+}
+
+.foot-right a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.foot-right a:hover {
+  color: #40E0D0;
+}

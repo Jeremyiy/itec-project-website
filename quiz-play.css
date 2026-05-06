@@ -1,0 +1,206 @@
+/* =========================
+   QUIZ PLAY – EASY / MED / HARD
+========================= */
+
+/* Force pixel font on quiz elements */
+.quiz-container,
+.quiz-container button,
+.quiz-container .question,
+.quiz-container .choice,
+.quiz-container .score-box,
+.quiz-container .progress-text {
+  font-family: "Press Start 2P", system-ui;
+}
+
+
+body {
+  margin: 0;
+  font-family: "Press Start 2P", system-ui;
+  background-color: #0b151a;
+  color: #ffffff;
+}
+
+/* =========================
+   PAGE LAYOUT
+========================= */
+.quiz-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================
+   QUIZ CONTAINER
+========================= */
+.quiz-container {
+  flex: 1;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 25px;
+  background-color: #0f1f26;
+  border: 2px solid #1e4b63;
+}
+
+/* =========================
+   TITLE
+========================= */
+.quiz-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 25px;
+}
+
+/* =========================
+   SCORE & PROGRESS
+========================= */
+.score-box {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+/* =========================
+   QUESTION CARD (MATCH REFERENCE UI)
+========================= */
+
+.question-card {
+  margin-top: 30px;                 /* pushes the whole block down */
+  padding: 20px 18px 22px;          /* internal spacing like reference */
+  background-color: #10222d;
+  border: 2px solid #1e4b63;
+  text-align: left;
+}
+
+/* Question text spacing */
+.question {
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 18px;              /* clear separation before answers */
+}
+
+/* Choices – centered and uniform */
+.choices {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.choice {
+  width: 100%;
+  max-width: 360px;
+  text-align: center;
+  padding: 10px;
+  background-color: #152a34;
+  border: 2px solid #1e4b63;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.choice:hover {
+  background-color: #1c3b48;
+}
+
+.choice.correct {
+  background-color: #2ecc71;
+  color: #0d1b2a;
+}
+
+.choice.wrong {
+  background-color: #e74c3c;
+}
+
+
+.progress-text {
+  font-size: 11px;
+  color: #6bd6ff;
+  margin: 10px 0 6px;
+}
+
+.progress-bar {
+  height: 8px;
+  background-color: #182c36;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background-color: #40E0D0;
+  transition: width 0.3s ease;
+}
+
+/* =========================
+   QUESTION
+========================= */
+.question {
+  font-size: 13px;
+  margin: 15px 0;
+}
+
+/* =========================
+   ANSWER CHOICES
+========================= */
+.choices {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.choice {
+  background-color: #152a34;
+  border: 2px solid #1e4b63;
+  padding: 10px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.choice:hover {
+  background-color: #1c3b48;
+}
+
+.choice.correct {
+  background-color: #2ecc71;
+  color: #0d1b2a;
+}
+
+.choice.wrong {
+  background-color: #e74c3c;
+}
+
+/* =========================
+   END SCREEN
+========================= */
+.end-screen {
+  display: none;
+  text-align: center;
+  margin-top: 25px;
+}
+
+.back-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 24px;
+  background-color: #00bfff;
+  color: #0d1b2a;
+  text-decoration: none;
+  border: 3px solid #ffffff;
+  box-shadow: 4px 4px 0 #000000;
+}
+
+.back-btn:hover {
+  box-shadow: 2px 2px 0 #000000;
+}
+
+
+/* Center choice buttons */
+.choices {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* ✅ center horizontally */
+  gap: 12px;
+}
+
+.choice {
+  width: 100%;           /* ✅ consistent width */
+  max-width: 360px;      /* ✅ keeps them centered */
+  text-align: center;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Marine Quiz – Easy</title>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <!-- Shared styles FIRST -->
+  <link rel="stylesheet" href="css/common.css">
+
+  <!-- Quiz play styles AFTER -->
+  <link rel="stylesheet" href="css/quiz-play.css">
+</head>
+
+<body class="quiz-page">
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-left">
+      <img src="images,vids/logs.png" alt="logo" class="logo">
+      <span class="site-name">Marine <span class="accent">Quiz</span></span>
+    </div>
+
+    <div class="nav-right">
+      <a href="homepage.html">HOME</a>
+      <a href="species.html">MARINE LIFE</a>
+      <a href="#">ECOSYSTEMS</a>
+      <a href="conservation.html">CONSERVATION</a>
+      <a href="quiz.html" class="active">QUIZ</a>
+    </div>
+  </nav>
+
+  <!-- MAIN QUIZ CONTENT -->
+  <main class="quiz-container">
+
+    <h1 class="quiz-title">EASY <span class="accent">QUIZ</span></h1>
+
+    <!-- WRAPPER FOR QUESTION UI -->
+    <div class="quiz-questions">
+
+      <!-- SCORE -->
+      <div class="score-box">
+        <span>SCORE</span>
+        <span><span id="score">0</span> / 5</span>
+      </div>
+
+      <!-- PROGRESS -->
+      <div class="progress-text">
+        <span id="qNumber">1</span> / 5
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progress"></div>
+      </div>
+
+      <!-- QUESTION -->
+<!-- QUESTION CARD -->
+    <div class="question-card">
+
+      <div class="question" id="questionText"></div>
+
+      <div class="choices" id="choices">
+        <button class="choice" data-index="0"></button>
+        <button class="choice" data-index="1"></button>
+        <button class="choice" data-index="2"></button>
+        <button class="choice" data-index="3"></button>
+      </div>
+
+    </div>
+
+
+      <!-- END SCREEN -->
+      <div class="end-screen" id="endScreen">
+        <h2>QUIZ COMPLETE!</h2>
+        <p>Your Score: <span id="finalScore"></span> / 5</p>
+        <a href="quiz.html" class="back-btn">BACK TO QUIZ MENU</a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div>MARINE QUIZ © 2026 Philippine Marine Biology</div>
+    <div class="foot-right">
+      <a href="species.html">SPECIES</a>
+      <a href="#">ECOSYSTEMS</a>
+      <a href="quiz.html">QUIZZES</a>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/easy.js"></script>
+</body>
+</html>
