@@ -90,7 +90,7 @@
 /* MEDIUM – YELLOW / ORANGE */
 .start-btn.medium {
   background-color: #f1c40f;
-  color: #0d1b2a; /* darker text for better contrast on yellow */
+  color: #0d1b2a;
 }
 
 .start-btn.medium:hover {
@@ -107,7 +107,7 @@
   background-color: #c0392b;
 }
 
-/* SHARED BUTTON STYLE (pixel feel preserved) */
+
 .start-btn {
   display: inline-block;
   padding: 10px 25px;
