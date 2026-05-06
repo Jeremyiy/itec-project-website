@@ -1,12 +1,12 @@
 /*===== HOMEPAGE HERO ===== */
 .hero {
   position: relative;
-  height: calc(100vh - 140px); /* nav + footer */
+  height: calc(100vh - 140px);
   display: flex;
   flex-direction: column;
-  justify-content: center;     /* ✅ vertical centering */
-  align-items: flex-start;     /* ✅ left-aligned like screenshot */
-  padding-left: 60px;          /* ✅ pushes text away from edge */
+  justify-content: center;     
+  align-items: flex-start;    
+  padding-left: 60px;         
   padding-right: 40px;
   overflow: hidden;
 }
@@ -22,8 +22,6 @@
   transform: scaleX(-1);
 }
 
-
-/* Optional dark overlay for readability */
 .hero::before {
   content: "";
   position: absolute;
@@ -78,7 +76,7 @@
   .hero {
     padding-left: 24px;
     padding-right: 24px;
-    align-items: center;      /* center text on mobile */
+    align-items: center;      
     text-align: center;
   }
 
