@@ -1,7 +1,9 @@
 /* =========================
-   EASY QUIZ QUESTIONS
+   QUESTION BANKS
 ========================= */
-const questions = [
+
+/* EASY QUESTIONS */
+const easyQuestions = [
   {
     question: "What is the largest coral reef system in the Philippines?",
     choices: [
@@ -23,7 +25,7 @@ const questions = [
     answer: 1
   },
   {
-    question: "Which marine animal is famous for living in sea anemones?",
+    question: "Which marine animal lives in sea anemones?",
     choices: [
       "Clownfish",
       "Sea Turtle",
@@ -36,8 +38,8 @@ const questions = [
     question: "Which ecosystem helps protect coastlines from strong waves?",
     choices: [
       "Coral Reefs",
-      "Deep Sea",
       "Open Ocean",
+      "Deep Sea",
       "Arctic Ice"
     ],
     answer: 0
@@ -54,15 +56,141 @@ const questions = [
   }
 ];
 
+/* MEDIUM QUESTIONS */
+const mediumQuestions = [
+  {
+    question: "Which ecosystem serves as a nursery for many marine species?",
+    choices: [
+      "Mangroves",
+      "Open Ocean",
+      "Deep Sea",
+      "Ice Caps"
+    ],
+    answer: 0
+  },
+  {
+    question: "Why are coral reefs important to marine ecosystems?",
+    choices: [
+      "They provide habitat and shelter",
+      "They raise ocean temperature",
+      "They reduce oxygen levels",
+      "They block sunlight"
+    ],
+    answer: 0
+  },
+  {
+    question: "Which human activity causes the most damage to coral reefs?",
+    choices: [
+      "Overfishing",
+      "Rainfall",
+      "Natural tides",
+      "Ocean currents"
+    ],
+    answer: 0
+  },
+  {
+    question: "What is the main role of seagrass beds?",
+    choices: [
+      "Stabilizing sediments and feeding marine life",
+      "Blocking coral growth",
+      "Polluting coastal waters",
+      "Increasing wave force"
+    ],
+    answer: 0
+  },
+  {
+    question: "Which conservation method best protects marine life?",
+    choices: [
+      "Marine protected areas",
+      "Dynamite fishing",
+      "Plastic dumping",
+      "Coral mining"
+    ],
+    answer: 0
+  }
+];
+
+/* HARD QUESTIONS */
+const hardQuestions = [
+  {
+    question: "What is the scientific name of the green sea turtle?",
+    choices: [
+      "Chelonia mydas",
+      "Eretmochelys imbricata",
+      "Dermochelys coriacea",
+      "Caretta caretta"
+    ],
+    answer: 0
+  },
+  {
+    question: "Which zone of the ocean receives little to no sunlight?",
+    choices: [
+      "Aphotic zone",
+      "Euphotic zone",
+      "Intertidal zone",
+      "Neritic zone"
+    ],
+    answer: 0
+  },
+  {
+    question: "What gas is primarily absorbed by phytoplankton during photosynthesis?",
+    choices: [
+      "Carbon dioxide",
+      "Oxygen",
+      "Nitrogen",
+      "Hydrogen"
+    ],
+    answer: 0
+  },
+  {
+    question: "Which marine organism forms the base of most ocean food webs?",
+    choices: [
+      "Phytoplankton",
+      "Zooplankton",
+      "Small fish",
+      "Coral polyps"
+    ],
+    answer: 0
+  },
+  {
+    question: "What deep‑sea feature is formed by tectonic plate movement?",
+    choices: [
+      "Mid‑ocean ridge",
+      "Coral reef",
+      "Lagoon",
+      "Seagrass meadow"
+    ],
+    answer: 0
+  }
+];
+
+/* =========================
+   SELECT DIFFICULTY
+========================= */
+
+const difficulty = document.body.dataset.difficulty;
+let questions;
+
+if (difficulty === "medium") {
+  questions = mediumQuestions;
+} else if (difficulty === "hard") {
+  questions = hardQuestions;
+} else {
+  // default to easy
+  questions = easyQuestions;
+}
+
 /* =========================
    VARIABLES
 ========================= */
+
 let currentQuestion = 0;
 let score = 0;
 
 /* =========================
    DOM ELEMENTS
 ========================= */
+
 const questionText = document.getElementById("questionText");
 const choiceButtons = document.querySelectorAll(".choice");
 const scoreText = document.getElementById("score");
@@ -76,6 +204,7 @@ const choicesContainer = document.getElementById("choices");
 /* =========================
    LOAD QUESTION
 ========================= */
+
 function loadQuestion() {
   const current = questions[currentQuestion];
 
@@ -93,8 +222,9 @@ function loadQuestion() {
 }
 
 /* =========================
-   ANSWER HANDLING
+   HANDLE ANSWERS
 ========================= */
+
 choiceButtons.forEach(button => {
   button.addEventListener("click", () => {
     const selected = Number(button.dataset.index);
@@ -124,6 +254,7 @@ choiceButtons.forEach(button => {
 /* =========================
    END QUIZ
 ========================= */
+
 function endQuiz() {
   questionText.style.display = "none";
   choicesContainer.style.display = "none";
@@ -135,4 +266,5 @@ function endQuiz() {
 /* =========================
    START QUIZ
 ========================= */
+
 loadQuestion();
