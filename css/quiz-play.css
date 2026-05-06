@@ -1,8 +1,4 @@
-/* =========================
-   QUIZ PLAY – EASY / MED / HARD
-========================= */
-
-/* Force pixel font on quiz elements */
+/* ============ QUIZ PLAY – EASY / MED / HARD ========================= */
 .quiz-container,
 .quiz-container button,
 .quiz-container .question,
@@ -20,18 +16,14 @@ body {
   color: #ffffff;
 }
 
-/* =========================
-   PAGE LAYOUT
-========================= */
+/* =========== PAGE LAYOUT ========================= */
 .quiz-page {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-/* =========================
-   QUIZ CONTAINER
-========================= */
+/* ============== QUIZ CONTAINER ========================= */
 .quiz-container {
   flex: 1;
   max-width: 500px;
@@ -41,43 +33,35 @@ body {
   border: 2px solid #1e4b63;
 }
 
-/* =========================
-   TITLE
-========================= */
+/* ============= TITLE ========================= */
 .quiz-title {
   text-align: center;
   font-size: 36px;
   margin-bottom: 25px;
 }
 
-/* =========================
-   SCORE & PROGRESS
-========================= */
+/* ============ SCORE & PROGRESS ========================= */
 .score-box {
   display: flex;
   justify-content: space-between;
   font-size: 12px;
 }
-/* =========================
-   QUESTION CARD (MATCH REFERENCE UI)
-========================= */
+/* ================QUESTION CARD  ========================= */
 
 .question-card {
-  margin-top: 30px;                 /* pushes the whole block down */
-  padding: 20px 18px 22px;          /* internal spacing like reference */
+  margin-top: 30px;               
+  padding: 20px 18px 22px;          
   background-color: #10222d;
   border: 2px solid #1e4b63;
   text-align: left;
 }
 
-/* Question text spacing */
 .question {
   font-size: 13px;
   line-height: 1.5;
-  margin-bottom: 18px;              /* clear separation before answers */
+  margin-bottom: 18px;            
 }
 
-/* Choices – centered and uniform */
 .choices {
   display: flex;
   flex-direction: column;
@@ -128,17 +112,13 @@ body {
   transition: width 0.3s ease;
 }
 
-/* =========================
-   QUESTION
-========================= */
+/* ======== QUESTION ========== */
 .question {
   font-size: 13px;
   margin: 15px 0;
 }
 
-/* =========================
-   ANSWER CHOICES
-========================= */
+/* =========== ANSWER CHOICES ============ */
 .choices {
   display: flex;
   flex-direction: column;
@@ -166,9 +146,7 @@ body {
   background-color: #e74c3c;
 }
 
-/* =========================
-   END SCREEN
-========================= */
+/* ========= END SCREEN ====== */
 .end-screen {
   display: none;
   text-align: center;
@@ -190,17 +168,15 @@ body {
   box-shadow: 2px 2px 0 #000000;
 }
 
-
-/* Center choice buttons */
 .choices {
   display: flex;
   flex-direction: column;
-  align-items: center;   /* ✅ center horizontally */
+  align-items: center;   
   gap: 12px;
 }
 
 .choice {
-  width: 100%;           /* ✅ consistent width */
-  max-width: 360px;      /* ✅ keeps them centered */
+  width: 100%;           
+  max-width: 360px;     
   text-align: center;
 }
